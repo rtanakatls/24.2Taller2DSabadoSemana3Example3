@@ -12,11 +12,38 @@ namespace _24._2Taller2DSabadoTienda
         private int amount;
         private float price;
 
+        public string Name { get { return name; } }
+        public int Amount { get { return amount; } }
+        public float Price { get { return price; } }
+
         public Item(string name, int amount, float price)
         {
             this.name = name;
             this.amount = amount;
             this.price = price;
+        }
+
+        public bool CheckStock(int amount)
+        {
+            if(this.amount >= amount)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public bool CheckTotalPrice(float money,int amount)
+        {
+            if(money>= price * amount)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public void ReduceStock(int amount)
+        {
+            this.amount -= amount;
         }
 
         public string GetData()
