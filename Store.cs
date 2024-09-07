@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace _24._2Taller2DSabadoTienda
 {
-    internal class Program
+    internal class Store
     {
-        static void Main(string[] args)
+        public void Execute()
         {
-            Store store = new Store();
-            store.Execute();
+
         }
     }
 }
